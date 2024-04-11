@@ -15,13 +15,12 @@ public class HelloControllerTest {
     @Autowired
     private TestRestTemplate template;
 
-
     @Test
     public void holaOk() throws Exception {
         ResponseEntity<String> response = template.getForEntity("/hola", String.class);
         
         // check that the body contains a <p> tag with the text "¡Hola Mundo!"
-        assertThat(response.getBody()).contains("<p>¡Hola Pablo ERROR!</p>");
+        assertThat(response.getBody()).contains("<p>¡Hola Mundo!</p>");
     }
 
     @Test
