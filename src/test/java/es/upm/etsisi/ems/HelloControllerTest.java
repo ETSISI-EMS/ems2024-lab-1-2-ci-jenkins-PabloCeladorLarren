@@ -15,6 +15,7 @@ public class HelloControllerTest {
     @Autowired
     private TestRestTemplate template;
 
+
     @Test
     public void holaOk() throws Exception {
         ResponseEntity<String> response = template.getForEntity("/hola", String.class);
